@@ -1,0 +1,35 @@
+{
+  "name": "Pixel Perfect Inc.",
+  "email": "hr@pixelperfect.dev",
+  "password": "password123",
+  "userType": "employer",
+  "location": "San Francisco, USA",
+  "requirements": ["React", "TypeScript", "GraphQL", "Next.js", "Figma"]
+}
+
+{
+  "name": "Nexus AI",
+  "email": "careers@nexusai.com",
+  "password": "password123",
+  "userType": "employer",
+  "location": "London, UK",
+  "requirements": ["Python", "TensorFlow", "PyTorch", "SQL", "Machine Learning"]
+}
+
+{
+  "name": "Enterprise Solutions Group",
+  "email": "recruitment@esg-corp.com",
+  "password": "password123",
+  "userType": "employer",
+  "location": "Frankfurt, Germany",
+  "requirements": ["Java", "Spring Boot", "Hibernate", "Oracle DB", "Microservices"]
+}
+
+{
+  "name": "Appify Mobile",
+  "email": "join@appify.io",
+  "password": "password123",
+  "userType": "employer",
+  "location": "Toronto, Canada",
+  "requirements": ["React Native", "Swift", "Kotlin", "Firebase", "API Integration"]
+}

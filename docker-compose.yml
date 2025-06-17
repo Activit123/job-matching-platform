@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  # 1. The Database Service
+  db:
+    image: postgres:15-alpine
+    container_name: jobplatform_db
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=JobPlatformDB
+    ports:
+      # Expose the database port to your host machine for easy debugging with pgAdmin
+      - "5432:5432"
+    volumes:
+      # This creates a persistent volume for your database data
+      - db-data:/var/lib/postgresql/data
+
+  # 2. The Backend Service
+  backend:
+    container_name: jobplatform_backend
+    build:
+      context: ./backend # Path to the backend folder
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "5001:5001"
+    environment:
+      # This is the connection string our new db.js will use.
+      # Notice the host is 'db', the name of our database service.
+      - DATABASE_URL=postgres://postgres:123456@db:5432/JobPlatformDB
+      # You can add other environment variables here
+      - JWT_SECRET=secret
+      - AIzaSyCps5jZWB-F_Y8e5EjZ4hEAEmFeVycFRtQ
+    depends_on:
+      - db # Tells Docker to start the database before starting the backend
+
+  # 3. The Frontend Service
+  frontend:
+    container_name: jobplatform_frontend
+    build:
+      context: ./frontend # Path to the frontend folder
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      # Map port 3000 on your host to port 80 inside the container (where Nginx is listening)
+      - "3000:80"
+    depends_on:
+      - backend # Wait for the backend to be ready before starting the frontend
+
+# Define the named volume for data persistence
+volumes:
+  db-data:

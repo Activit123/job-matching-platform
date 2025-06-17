@@ -1,0 +1,44 @@
+{
+  "name": "Alice Williams",
+  "email": "alice.w@university.edu",
+  "password": "password123",
+  "userType": "student",
+  "location": "San Francisco, USA",
+  "skills": ["React", "JavaScript", "HTML5", "CSS3", "Git"]
+}
+
+{
+  "name": "Bob Johnson",
+  "email": "bob.j@university.edu",
+  "password": "password123",
+  "userType": "student",
+  "location": "London, UK",
+  "skills": ["Python", "Pandas", "NumPy", "Scikit-learn", "Jupyter"]
+}
+
+{
+  "name": "Charlie Brown",
+  "email": "charlie.b@university.edu",
+  "password": "password123",
+  "userType": "student",
+  "location": "Berlin, Germany",
+  "skills": ["Java", "Spring Boot", "PostgreSQL", "REST APIs", "Docker"]
+}
+
+{
+  "name": "Diana Miller",
+  "email": "diana.m@university.edu",
+  "password": "password123",
+  "userType": "student",
+  "location": "Toronto, Canada",
+  "skills": ["React", "Node.js", "Express", "MongoDB", "JavaScript"]
+
+{
+  "name": "Evan Davis",
+  "email": "evan.d@university.edu",
+  "password": "password123",
+  "userType": "student",
+  "location": "Austin, USA",
+  "skills": ["AWS", "Docker", "CI/CD", "Bash Scripting", "Python"]
+}
+}
